@@ -10,7 +10,7 @@ def print_hi(name):
     yourdate = dateutil.parser.parse(r.json()["data"][0]["attributes"]["arrival_time"])
     print(yourdate)
     print(datetime.datetime.now())
-    print(datetime.datetime.now()-yourdate.replace(tzinfo=None))
+    print(yourdate.replace(tzinfo=None)-datetime.datetime.now().replace(tzinfo=None))
 #subtract the current time from the arrival time
 
 # Press the green button in the gutter to run the script.
